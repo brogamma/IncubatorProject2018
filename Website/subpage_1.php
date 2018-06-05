@@ -1,3 +1,18 @@
+<!DOCTYPE HTML>
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+?>	
 <html>
 	<head>
 		<title>Transport Incubator 2018</title>
@@ -99,29 +114,11 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			<script> function loadXMLDoc(incubtype) {
-					var xmlhttp = new XMLHttpRequest();
-					xmlhttp.onreadystatechange = function() {
-					  if (this.readyState == 4 && this.status == 200) {
-						myFunction(this);
-					  }
-					};
-					xmlhttp.open("GET", incubtype , true);
-					xmlhttp.send();
-				  }
-				  function myFunction(xml) {
-					var i;
-					var xmlDoc = xml.responseXML;
-					var x = xmlDoc.getElementsByTagName("HUMIDITY");
-					var y = xmlDoc.getElementsByTagName("TEMPRATURE");
-					document.getElementById("Temp_and_Humid").innerHTML;
-				  }
-			</script>
 			<script> function If_statement(type){
 				var response;
-				if(loadXMLDoc(type)== true)
+				if()
 				{
-					document.getElementById("True",id).innerHTML = loadXMLDoc(id);
+					document.getElementById("True",id).innerHTML;
 				}
 
 				else
